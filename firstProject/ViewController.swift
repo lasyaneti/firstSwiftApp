@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var personalBio: UILabel!
+    @IBOutlet weak var buttonClicked: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        personalBio.isHidden = true //bio is hidden
     }
-
-
+    @IBAction func buttonClicked(_ sender: Any) {
+            personalBio.isHidden = false //bio is revealed
+    }
+    
 }
-
